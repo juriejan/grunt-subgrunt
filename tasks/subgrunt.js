@@ -106,11 +106,8 @@ module.exports = function (grunt) {
                 'Gruntfile.coffee',
                 'gruntfile.coffee'
             ], function (result, name) {
-                console.log(result, name)
                 return result || grunt.file.exists(path, name)
             }, false)
-
-            console.log(exists);
 
             if (!exists) {
                 grunt.fail.warn('The "' + path + '" directory is not a valid, or does not contain a Gruntfile.');
